@@ -94,6 +94,8 @@
 		C4FC956D2AC26819004F6C4D /* RickAndMorty */ = {
 			isa = PBXGroup;
 			children = (
+				C4FC95982AC2683E004F6C4D /* Commons */,
+				C4FC95992AC2683E004F6C4D /* Scenes */,
 				C4FC956E2AC26819004F6C4D /* RickAndMortyApp.swift */,
 				C4FC95702AC26819004F6C4D /* ContentView.swift */,
 				C4FC95722AC2681B004F6C4D /* Assets.xcassets */,
@@ -113,6 +115,8 @@
 		C4FC957E2AC2681B004F6C4D /* RickAndMortyTests */ = {
 			isa = PBXGroup;
 			children = (
+				C4FC95B32AC26888004F6C4D /* testCommons */,
+				C4FC95A62AC2684E004F6C4D /* testScenes */,
 				C4FC957F2AC2681B004F6C4D /* RickAndMortyTests.swift */,
 			);
 			path = RickAndMortyTests;
@@ -125,6 +129,226 @@
 				C4FC958B2AC2681B004F6C4D /* RickAndMortyUITestsLaunchTests.swift */,
 			);
 			path = RickAndMortyUITests;
+			sourceTree = "<group>";
+		};
+		C4FC95982AC2683E004F6C4D /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		C4FC95992AC2683E004F6C4D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C4FC959A2AC2683E004F6C4D /* Intro */,
+				C4FC959E2AC2683E004F6C4D /* CharacterList */,
+				C4FC95A22AC2683E004F6C4D /* CharacterDetail */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C4FC959A2AC2683E004F6C4D /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				C4FC959B2AC2683E004F6C4D /* ViewModel */,
+				C4FC959C2AC2683E004F6C4D /* Model */,
+				C4FC959D2AC2683E004F6C4D /* View */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		C4FC959B2AC2683E004F6C4D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C4FC959C2AC2683E004F6C4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4FC959D2AC2683E004F6C4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4FC959E2AC2683E004F6C4D /* CharacterList */ = {
+			isa = PBXGroup;
+			children = (
+				C4FC959F2AC2683E004F6C4D /* ViewModel */,
+				C4FC95A02AC2683E004F6C4D /* Model */,
+				C4FC95A12AC2683E004F6C4D /* View */,
+			);
+			path = CharacterList;
+			sourceTree = "<group>";
+		};
+		C4FC959F2AC2683E004F6C4D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C4FC95A02AC2683E004F6C4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4FC95A12AC2683E004F6C4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4FC95A22AC2683E004F6C4D /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C4FC95A32AC2683E004F6C4D /* ViewModel */,
+				C4FC95A42AC2683E004F6C4D /* Model */,
+				C4FC95A52AC2683E004F6C4D /* View */,
+			);
+			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
+		C4FC95A32AC2683E004F6C4D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C4FC95A42AC2683E004F6C4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4FC95A52AC2683E004F6C4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4FC95A62AC2684E004F6C4D /* testScenes */ = {
+			isa = PBXGroup;
+			children = (
+				C4FC95A72AC2684E004F6C4D /* testCharacterList */,
+				C4FC95AB2AC2684E004F6C4D /* testIntro */,
+				C4FC95AF2AC2684E004F6C4D /* testCharacterDetail */,
+			);
+			path = testScenes;
+			sourceTree = "<group>";
+		};
+		C4FC95A72AC2684E004F6C4D /* testCharacterList */ = {
+			isa = PBXGroup;
+			children = (
+				C4FC95A82AC2684E004F6C4D /* ViewModel */,
+				C4FC95A92AC2684E004F6C4D /* Model */,
+				C4FC95AA2AC2684E004F6C4D /* View */,
+			);
+			path = testCharacterList;
+			sourceTree = "<group>";
+		};
+		C4FC95A82AC2684E004F6C4D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C4FC95A92AC2684E004F6C4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4FC95AA2AC2684E004F6C4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4FC95AB2AC2684E004F6C4D /* testIntro */ = {
+			isa = PBXGroup;
+			children = (
+				C4FC95AC2AC2684E004F6C4D /* ViewModel */,
+				C4FC95AD2AC2684E004F6C4D /* Model */,
+				C4FC95AE2AC2684E004F6C4D /* View */,
+			);
+			path = testIntro;
+			sourceTree = "<group>";
+		};
+		C4FC95AC2AC2684E004F6C4D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C4FC95AD2AC2684E004F6C4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4FC95AE2AC2684E004F6C4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4FC95AF2AC2684E004F6C4D /* testCharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C4FC95B02AC2684E004F6C4D /* ViewModel */,
+				C4FC95B12AC2684E004F6C4D /* Model */,
+				C4FC95B22AC2684E004F6C4D /* View */,
+			);
+			path = testCharacterDetail;
+			sourceTree = "<group>";
+		};
+		C4FC95B02AC2684E004F6C4D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C4FC95B12AC2684E004F6C4D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C4FC95B22AC2684E004F6C4D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4FC95B32AC26888004F6C4D /* testCommons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = testCommons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
