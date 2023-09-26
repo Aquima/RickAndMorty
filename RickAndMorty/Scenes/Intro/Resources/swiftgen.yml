@@ -1,0 +1,18 @@
+xcassets:
+  inputs:
+    - AssetsIntro.xcassets
+  outputs:
+    - templateName: swift5
+      output: AssetsIntro.swift
+      params:
+        forceProvidesNamespaces: true
+        enumName: AssetsIntro
+strings:
+    inputs: 
+        - IntroLocalizable.strings
+    outputs:
+    - templateName: structured-swift5
+      output: IntroLocalizable.swift
+      params:
+        enumName: IntroLocalizable
+
