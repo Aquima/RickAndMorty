@@ -10,6 +10,7 @@ import SwiftUI
 struct IntroView: View {
     // MARK: - Properties
     @State private var moveOscillationPath = false
+    @State private var showingCharacterListView = false
 
     var body: some View {
         VStack(spacing: 350, content: {
@@ -42,6 +43,7 @@ struct IntroView: View {
     private var enterButton: some View {
         Button(action: {
             print("go to Character list")
+            self.goCharacterListView()
         }, label: {
             Text(IntroLocalizable.Title.Button.normal)
         })
@@ -51,6 +53,14 @@ struct IntroView: View {
         .buttonStyle(
             FenixButtonStyle()
         )
+    }
+    
+    private func goCharacterListView() {
+        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+        if let window = windowScene?.windows.first {
+            window.rootViewController = UIHostingController(rootView: CharacterListView())
+            window.makeKeyAndVisible()
+        }
     }
 
     private var messageText: some View {
