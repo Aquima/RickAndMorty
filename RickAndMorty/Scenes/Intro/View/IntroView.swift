@@ -8,20 +8,35 @@
 import SwiftUI
 
 struct IntroView: View {
+    // MARK: - Properties
+    @State private var moveOscillationPath = false
+
     var body: some View {
-        VStack(spacing: 40, content: {
+        VStack(spacing: 350, content: {
             logo
-            messageText
-            enterButton
+            VStack(spacing: 20, content: {
+                messageText
+                enterButton
+            })
         })
+        .background {
+            AssetsIntro.background.swiftUIImage
+                .background(.black)
+        }
     }
 
     private var logo: some View {
         AssetsIntro.logo.swiftUIImage
             .resizable()
-            .frame(height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+            .frame(height: 100)
             .padding(.leading, 40)
             .padding(.trailing, 40)
+            .rotationEffect(.degrees( moveOscillationPath ? -5 : 5))
+            .onAppear {
+                withAnimation(Animation.easeInOut(duration: 1.0).repeatForever(), {
+                    self.moveOscillationPath.toggle()
+                })
+            }
     }
 
     private var enterButton: some View {
@@ -30,12 +45,11 @@ struct IntroView: View {
         }, label: {
             Text(IntroLocalizable.Title.Button.normal)
         })
-        .frame(height: 50)
+        .frame(height: 60)
+        .padding(.leading, 40)
+        .padding(.trailing, 40)
         .buttonStyle(
-            FenixButtonStyle(
-                textColor: .white,
-                backgroundColor: .black
-            )
+            FenixButtonStyle()
         )
     }
 

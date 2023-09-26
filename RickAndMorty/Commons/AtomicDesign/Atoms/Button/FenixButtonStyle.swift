@@ -9,17 +9,13 @@ import SwiftUI
 
 struct FenixButtonStyle: ButtonStyle {
 
-    var textColor: Color
-    var backgroundColor: Color
-
     func makeBody(configuration: Configuration) -> some View {
         configuration
             .label
             .font(.custom("GetSchwifty-Regular", size: 30))
-            .foregroundColor(configuration.isPressed ? textColor.opacity(0.8) : textColor)
-            .padding()
-            .background(configuration.isPressed ? backgroundColor.opacity(0.1) : backgroundColor)
+            .foregroundColor(configuration.isPressed ? .black.opacity(0.8) : .black)
+            .background(configuration.isPressed ? .white.opacity(0.1) : .white)
             .animation(.easeOut(duration: 1.0), value: configuration.isPressed)
-            .clipShape(Capsule())
+            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 5, height: 5)))
     }
 }
