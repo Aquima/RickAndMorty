@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftlint-plugin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/adamayoung/swiftlint-plugin.git",
+      "state" : {
+        "revision" : "7d24ed447bda289b7770d91051e8f14c91564a18",
+        "version" : "0.51.0"
+      }
+    }
+  ],
+  "version" : 2
+}
