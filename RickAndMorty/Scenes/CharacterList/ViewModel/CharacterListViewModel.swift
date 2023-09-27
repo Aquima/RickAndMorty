@@ -12,14 +12,6 @@ final class CharacterListViewModel: ObservableObject {
 
     private lazy var baseURL = URL(string: "https://rickandmortyapi.com/api/")!
 
-    internal enum PaginationState {
-        case isLoading
-        case loadMore
-        case loadedAll
-        case noResults
-        case error(String)
-    }
-
     @Published private(set) var previewCharacters: [RyckAndMortyCharacter] = []
     @Published private(set) var isMoreDataAvailable: Bool = true
     @Published private(set) var paginationState: PaginationState = .loadMore
