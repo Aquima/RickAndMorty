@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct CharacterItemView: View {
 
@@ -13,43 +14,54 @@ struct CharacterItemView: View {
 
     var body: some View {
         VStack(spacing: .zero) {
-            AsyncImage(url: .init(string: character.image)) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(height: 130)
-                    .clipped()
-            } placeholder: {
-                ProgressView()
-            }
+            headerCharacterItem
+            imageCharacterLoader
+        }
+        .background(.clear)
+    }
+
+    var headerCharacterItem: some View {
+        HStack(alignment: .center) {
+            Image(systemName: "person.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 15, height: 15)
+                .clipped()
+                .clipShape(Rectangle())
 
             VStack(alignment: .leading) {
-
-//                PillView(id: user.id)
-
-                Text("\(character.name) \(character.status.rawValue)")
-                    .foregroundColor(.black)
-                    .font(
-                        .system(.body, design: .rounded)
-                    )
+                Text(character.name)
+                    .fontWeight(.bold)
+                    .fenixTitleCharacterTextStyled
+                Text(character.status.rawValue)
+                    .fenixTextStyled
             }
-            .frame(maxWidth: .infinity,
-                   alignment: .leading)
-            .padding(.horizontal, 8)
-            .padding(.vertical, 5)
-            .background(.white)
         }
-        .clipShape(RoundedRectangle(cornerRadius: 16,
-                                    style: .continuous))
-        .shadow(color: .white.opacity(0.1),
-                radius: 2,
-                x: 0,
-                y: 1)
+        .frame(maxWidth: .infinity,
+               alignment: .leading)
+        .padding([.leading, .trailing], 10)
+        .padding(.vertical, 15)
+        .background(.clear)
+    }
+    var imageCharacterLoader: some View {
+        CachedAsyncImage(url: .init(string: character.image)) { image in
+            image.resizable()
+                 .aspectRatio(contentMode: .fill)
+                 .frame(maxWidth: .infinity,
+                        alignment: .center)
+                 .clipped()
+                 .padding([.leading, .trailing], 0)
+        } placeholder: {
+            ProgressView()
+                .frame(height: 250,
+                       alignment: .center)
+        }
     }
 }
 
 #Preview {
-    let previewCharacter = RyckAndMortyCharacter(name: "Rick",
+    let previewCharacter = RyckAndMortyCharacter(id: UUID(), dbid: 1,
+                                                 name: "Rick",
                                                  status: .alive,
                                                  image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg")
     return CharacterItemView(character: previewCharacter)

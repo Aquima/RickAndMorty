@@ -8,13 +8,29 @@
 import Foundation
 
 // MARK: - RyckAndMortyCharacter
-struct RyckAndMortyCharacter: Identifiable, Hashable {
-    let id = UUID()
-    let name: String
-    let status: Status
-    let image: String
+public struct RyckAndMortyCharacter: Identifiable, Hashable {
+
+    public let id: UUID
+    public let dbid: Int
+    public let name: String
+    public let status: Status
+    public let image: String
+
+    public init(id: UUID, dbid: Int, name: String, status: Status, image: String) {
+        self.dbid = dbid
+        self.id = id
+        self.name = name
+        self.status = status
+        self.image = image
+    }
 }
 
+// MARK: - Info
+public struct Info: Codable {
+    let count, pages: Int
+    let next: String
+    let prev: String?
+}
 enum Gender: String, Codable {
     case female = "Female"
     case male = "Male"
@@ -32,7 +48,7 @@ enum Species: String, Codable {
     case human = "Human"
 }
 
-enum Status: String, Codable {
+public enum Status: String, Codable {
     case alive = "Alive"
     case dead = "Dead"
     case unknown = "unknown"
