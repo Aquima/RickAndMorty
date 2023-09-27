@@ -13,7 +13,6 @@ final class CharacterListViewModel: ObservableObject {
     private lazy var baseURL = URL(string: "https://rickandmortyapi.com/api/")!
 
     @Published private(set) var previewCharacters: [RyckAndMortyCharacter] = []
-    @Published private(set) var isMoreDataAvailable: Bool = true
     @Published private(set) var paginationState: PaginationState = .loadMore
 
     private var cancellable: Cancellable?
@@ -31,7 +30,9 @@ final class CharacterListViewModel: ObservableObject {
 
     private func fetchCharacters() {
         cancellable = makeRemoteCharacterLoader(currentPage).handleEvents(receiveCancel: { [weak self] in
-                self?.paginationState = .noResults
+            guard let self = self else { return }
+            self.paginationState = .noResults
+            self.objectWillChange.send()
         })
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { [weak self] completion in
@@ -39,15 +40,18 @@ final class CharacterListViewModel: ObservableObject {
                 switch completion {
                 case .finished:
                     self.paginationState = .loadMore
+                    objectWillChange.send()
 
                 case let .failure(error):
                     print(error.localizedDescription)
                     self.paginationState = .loadedAll
+                    objectWillChange.send()
                 }
             }, receiveValue: { [weak self] resource in
                 guard let self = self else { return }
                 self.currentPage += 1
                 resource.forEach {self.previewCharacters.append($0)}
+                objectWillChange.send()
             })
     }
 

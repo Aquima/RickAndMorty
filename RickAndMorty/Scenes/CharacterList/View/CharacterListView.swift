@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct CharacterListView: View {
-    @StateObject private var viewModel: CharacterListViewModel
+    @ObservedObject private var viewModel: CharacterListViewModel
 
     init() {
-        _viewModel = StateObject(wrappedValue: CharacterListViewModel())
+        _viewModel = ObservedObject(wrappedValue: CharacterListViewModel())
     }
 
     var body: some View {
