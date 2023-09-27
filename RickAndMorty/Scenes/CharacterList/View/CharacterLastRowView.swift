@@ -38,6 +38,6 @@ struct CharacterLastRowView: View {
 struct ListPlaceholderRowView_Previews: PreviewProvider {
     static var previews: some View {
         CharacterLastRowView(paginationState: .noResults,
-                             loadMore: { })
+                             loadMoreItems: { })
     }
 }
