@@ -54,7 +54,7 @@ struct IntroView: View {
             FenixButtonStyle()
         )
     }
-    
+
     private func goCharacterListView() {
         let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
         if let window = windowScene?.windows.first {
