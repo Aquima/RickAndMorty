@@ -40,6 +40,11 @@ final class CharacterListViewModel: ObservableObject {
     }
 
     func loadMoreItems() {
-
+        self.paginationState = .isLoading
+        self.fetchCharacters()
+    }
+    
+    private func fetchCharacters() {
+        
     }
 }
