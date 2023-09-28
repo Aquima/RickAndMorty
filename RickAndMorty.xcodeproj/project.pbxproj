@@ -24,6 +24,8 @@
 		C49FE2ED2AC3D84500D27AED /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FE2EC2AC3D84500D27AED /* SharedTestHelpers.swift */; };
 		C49FE2F02AC3D8D100D27AED /* XCTestCaseMemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FE2EE2AC3D89E00D27AED /* XCTestCaseMemoryLeakTracking.swift */; };
 		C49FE2F42AC3DAAE00D27AED /* CharacterItemsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FE2F32AC3DAAE00D27AED /* CharacterItemsMapperTests.swift */; };
+		C4C4988C2AC538A900880D33 /* FetchCharacterListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4988A2AC5385200880D33 /* FetchCharacterListAPI.swift */; };
+		C4C4988E2AC544CA00880D33 /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4988D2AC544CA00880D33 /* Rechability.swift */; };
 		C4CA0F4C2AC325FE0045D386 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F4B2AC325FE0045D386 /* CharacterListView.swift */; };
 		C4CA0F4E2AC326AC0045D386 /* CharacterItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F4D2AC326AC0045D386 /* CharacterItemView.swift */; };
 		C4CA0F502AC327890045D386 /* RyckAndMortyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F4F2AC327890045D386 /* RyckAndMortyCharacter.swift */; };
@@ -81,6 +83,8 @@
 		C49FE2EC2AC3D84500D27AED /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		C49FE2EE2AC3D89E00D27AED /* XCTestCaseMemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseMemoryLeakTracking.swift; sourceTree = "<group>"; };
 		C49FE2F32AC3DAAE00D27AED /* CharacterItemsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterItemsMapperTests.swift; sourceTree = "<group>"; };
+		C4C4988A2AC5385200880D33 /* FetchCharacterListAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharacterListAPI.swift; sourceTree = "<group>"; };
+		C4C4988D2AC544CA00880D33 /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
 		C4CA0F4B2AC325FE0045D386 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 		C4CA0F4D2AC326AC0045D386 /* CharacterItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterItemView.swift; sourceTree = "<group>"; };
 		C4CA0F4F2AC327890045D386 /* RyckAndMortyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyckAndMortyCharacter.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 		C49FE2CF2AC3BEE500D27AED /* API */ = {
 			isa = PBXGroup;
 			children = (
+				C4C4988A2AC5385200880D33 /* FetchCharacterListAPI.swift */,
 				C49FE2D12AC3C13100D27AED /* Helpers */,
 				C49FE2D02AC3BEE500D27AED /* RickAndMortyCharacters */,
 			);
@@ -175,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				C49FE2E02AC3CA8500D27AED /* URLSessionHTTPClient.swift */,
+				C4C4988D2AC544CA00880D33 /* Rechability.swift */,
 			);
 			path = "Shared API Infra";
 			sourceTree = "<group>";
@@ -762,12 +768,14 @@
 				C49FE2E12AC3CA8500D27AED /* URLSessionHTTPClient.swift in Sources */,
 				C4CA0F562AC3292F0045D386 /* StaticJSONMapper.swift in Sources */,
 				C49FE2D72AC3C72000D27AED /* CharacterDataMapper.swift in Sources */,
+				C4C4988E2AC544CA00880D33 /* Rechability.swift in Sources */,
 				C49FE2DE2AC3C8DD00D27AED /* Paginated.swift in Sources */,
 				C4CA0F502AC327890045D386 /* RyckAndMortyCharacter.swift in Sources */,
 				C4FC956F2AC26819004F6C4D /* RickAndMortyApp.swift in Sources */,
 				C4FC95D52AC285DD004F6C4D /* FenixTextStyle.swift in Sources */,
 				C422FBE92AC4D1CD0033B5CB /* RyckAndMortyCharactersListStub.swift in Sources */,
 				C49FE2CA2AC3B56900D27AED /* CharacterLastRowView.swift in Sources */,
+				C4C4988C2AC538A900880D33 /* FetchCharacterListAPI.swift in Sources */,
 				C4FC95B92AC26C38004F6C4D /* IntroView.swift in Sources */,
 				C4FC95C42AC27463004F6C4D /* AssetsIntro.swift in Sources */,
 			);

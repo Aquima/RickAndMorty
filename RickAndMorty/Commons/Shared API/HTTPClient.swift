@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 public protocol HTTPClientTask {
     func cancel()
@@ -18,4 +19,19 @@ public protocol HTTPClient {
     /// Clients are responsible to dispatch to appropriate threads, if needed.
     @discardableResult
     func get(from url: URL, completion: @escaping (Result) -> Void) -> HTTPClientTask
+}
+
+public extension HTTPClient {
+    typealias Publisher = AnyPublisher<(Data, HTTPURLResponse), Error>
+
+    func getPublisher(url: URL) -> Publisher {
+        var task: HTTPClientTask?
+        return Deferred {
+            Future { completion in
+                task = self.get(from: url, completion: completion)
+            }
+        }
+        .handleEvents(receiveCancel: { task?.cancel() })
+        .eraseToAnyPublisher()
+    }
 }
