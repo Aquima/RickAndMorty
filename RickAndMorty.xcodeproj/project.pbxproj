@@ -26,6 +26,7 @@
 		C49FE2F42AC3DAAE00D27AED /* CharacterItemsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FE2F32AC3DAAE00D27AED /* CharacterItemsMapperTests.swift */; };
 		C4C4988C2AC538A900880D33 /* FetchCharacterListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4988A2AC5385200880D33 /* FetchCharacterListAPI.swift */; };
 		C4C4988E2AC544CA00880D33 /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4988D2AC544CA00880D33 /* Rechability.swift */; };
+		C4C498912AC550DE00880D33 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = C4C498902AC550DE00880D33 /* ViewInspector */; };
 		C4CA0F4C2AC325FE0045D386 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F4B2AC325FE0045D386 /* CharacterListView.swift */; };
 		C4CA0F4E2AC326AC0045D386 /* CharacterItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F4D2AC326AC0045D386 /* CharacterItemView.swift */; };
 		C4CA0F502AC327890045D386 /* RyckAndMortyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F4F2AC327890045D386 /* RyckAndMortyCharacter.swift */; };
@@ -126,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C498912AC550DE00880D33 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +653,9 @@
 				C4FC957D2AC2681B004F6C4D /* PBXTargetDependency */,
 			);
 			name = RickAndMortyTests;
+			packageProductDependencies = (
+				C4C498902AC550DE00880D33 /* ViewInspector */,
+			);
 			productName = RickAndMortyTests;
 			productReference = C4FC957B2AC2681B004F6C4D /* RickAndMortyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -708,6 +713,7 @@
 			packageReferences = (
 				C4FC95B52AC26A45004F6C4D /* XCRemoteSwiftPackageReference "swiftlint-plugin" */,
 				C49FE2E22AC3D1EB00D27AED /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				C4C4988F2AC550DE00880D33 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 			);
 			productRefGroup = C4FC956C2AC26819004F6C4D /* Products */;
 			projectDirPath = "";
@@ -1132,8 +1138,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.1;
+				kind = exactVersion;
+				version = 2.1.1;
+			};
+		};
+		C4C4988F2AC550DE00880D33 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = exactVersion;
+				version = 0.9.8;
 			};
 		};
 		C4FC95B52AC26A45004F6C4D /* XCRemoteSwiftPackageReference "swiftlint-plugin" */ = {
@@ -1151,6 +1165,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C49FE2E22AC3D1EB00D27AED /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
+		};
+		C4C498902AC550DE00880D33 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4C4988F2AC550DE00880D33 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
 		};
 		C4FC95B62AC26A68004F6C4D /* SwiftLintPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
