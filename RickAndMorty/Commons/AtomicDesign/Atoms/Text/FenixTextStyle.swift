@@ -10,6 +10,11 @@ import SwiftUI
 extension View {
     var fenixTextStyled: some View {
         self.font(.custom("Helvetica-Regular", size: 14))
-            .foregroundColor(.white)
+            .foregroundColor(.gray)
+    }
+
+    var fenixTitleCharacterTextStyled: some View {
+        self.font(.custom("Helvetica-Bold", size: 16))
+            .foregroundColor(.black)
     }
 }

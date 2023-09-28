@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CharacterLastRowView: View {
 
-    let paginationState: CharacterListViewModel.PaginationState
+    let paginationState: PaginationState
     let loadMoreItems: () -> Void
 
     var body: some View {

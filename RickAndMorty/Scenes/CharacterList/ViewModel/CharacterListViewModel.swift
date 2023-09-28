@@ -6,45 +6,29 @@
 //
 
 import Foundation
-final class CharacterListViewModel: ObservableObject {
+import Combine
 
-    internal enum PaginationState {
-        case isLoading
-        case loadMore
-        case loadedAll
-        case noResults
-        case error(String)
-    }
+final class CharacterListViewModel: ObservableObject {
+    private var service: CharacterListViewModelProtocol?
 
     @Published private(set) var previewCharacters: [RyckAndMortyCharacter] = []
-    @Published private(set) var isMoreDataAvailable: Bool = true
-    @Published private(set) var paginationState: PaginationState = .isLoading
+    @Published private(set) var paginationState: PaginationState = .loadMore
 
     init(characters: [RyckAndMortyCharacter] = []) {
         self.previewCharacters = characters
-        previewCharacters = [RyckAndMortyCharacter(name: "Rick",
-                                                   status: .alive,
-                                                   image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg"),
-                             RyckAndMortyCharacter(name: "Morty",
-                                                   status: .dead,
-                                                   image: "https://rickandmortyapi.com/api/character/avatar/2.jpeg"),
-                             RyckAndMortyCharacter(name: "Summer Smith",
-                                                   status: .dead,
-                                                   image: "https://rickandmortyapi.com/api/character/avatar/3.jpeg"),
-                             RyckAndMortyCharacter(name: "Beth Smith",
-                                                   status: .dead,
-                                                   image: "https://rickandmortyapi.com/api/character/avatar/4.jpeg"),
-                             RyckAndMortyCharacter(name: "Jerry Smith",
-                                                   status: .dead,
-                                                   image: "https://rickandmortyapi.com/api/character/avatar/5.jpeg")]
+        self.service = FetchCharacterListAPI()
     }
 
     func loadMoreItems() {
         self.paginationState = .isLoading
         self.fetchCharacters()
     }
-    
+
     private func fetchCharacters() {
-        
+        service?.loadCharacters({ characters, paginationState in
+            self.previewCharacters = characters
+            self.paginationState = paginationState
+        })
     }
+
 }
