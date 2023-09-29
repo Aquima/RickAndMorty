@@ -8,67 +8,63 @@
 import SwiftUI
 
 struct IntroView: View {
-    // MARK: - Properties
+    // MARK: - State Properties
     @State private var moveOscillationPath = false
     @State private var showingCharacterListView = false
+    // MARK: - ObservedObject Properties
+    @ObservedObject private var viewModel: IntroViewModel
+
+    init() {
+        _viewModel = ObservedObject(wrappedValue: IntroViewModel())
+    }
 
     var body: some View {
-        VStack(spacing: 350, content: {
-            logo
-            VStack(spacing: 20, content: {
-                messageText
-                enterButton
+        NavigationStack {
+            VStack(spacing: 350, content: {
+                logo
+                VStack(spacing: 20, content: {
+                    messageText
+                    enterButton
+                })
             })
-        })
-        .background {
-            AssetsIntro.background.swiftUIImage
-                .background(.black)
+            .background {
+                Image(viewModel.background, bundle: .main)
+                    .background(.black)
+            }
         }
     }
 
-    private var logo: some View {
-        AssetsIntro.logo.swiftUIImage
+    var logo: some View {
+        Image(viewModel.logoIntro, bundle: .main)
             .resizable()
             .frame(height: 100)
             .padding(.leading, 40)
             .padding(.trailing, 40)
-            .rotationEffect(.degrees( moveOscillationPath ? -5 : 5))
-            .onAppear {
-                withAnimation(Animation.easeInOut(duration: 1.0).repeatForever(), {
-                    self.moveOscillationPath.toggle()
-                })
-            }
     }
 
     private var enterButton: some View {
         Button(action: {
-            print("go to Character list")
-            self.goCharacterListView()
+            showingCharacterListView.toggle()
         }, label: {
-            Text(IntroLocalizable.Title.Button.normal)
+            Text(viewModel.titleButton)
         })
         .frame(height: 60)
         .padding(.leading, 40)
         .padding(.trailing, 40)
-        .buttonStyle(
-            FenixButtonStyle()
-        )
-    }
-
-    private func goCharacterListView() {
-        let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene
-        if let window = windowScene?.windows.first {
-            window.rootViewController = UIHostingController(rootView: CharacterListView())
-            window.makeKeyAndVisible()
+        .buttonStyle(FenixButtonStyle())
+        .id(viewModel.idEnterButton)
+        .navigationDestination(isPresented: $showingCharacterListView) {
+            CharacterListView()
         }
     }
 
     private var messageText: some View {
-        Text(IntroLocalizable.Message.Text.normal)
+        Text(viewModel.messageText)
             .multilineTextAlignment(.center)
             .padding(.leading, 40)
             .padding(.trailing, 40)
             .fenixTextStyled
+            .id(viewModel.idMessageText)
     }
 }
 

@@ -1,0 +1,78 @@
+{
+  "configurations" : [
+    {
+      "id" : "442F3383-96B3-404C-A257-A33DFB61210B",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:RickAndMorty.xcodeproj",
+          "identifier" : "C4FC957A2AC2681B004F6C4D",
+          "name" : "RickAndMortyTests"
+        },
+        {
+          "containerPath" : "container:RickAndMorty.xcodeproj",
+          "identifier" : "C4FC956A2AC26819004F6C4D",
+          "name" : "RickAndMorty"
+        }
+      ]
+    },
+    "language" : "en",
+    "preferredScreenCaptureFormat" : "screenshot",
+    "region" : "US",
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:RickAndMorty.xcodeproj",
+      "identifier" : "C4FC957A2AC2681B004F6C4D",
+      "name" : "RickAndMortyTests"
+    },
+    "uiTestingScreenshotsLifetime" : "keepNever"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "selectedTests" : [
+        "CharacterDataMapperTests\/testMapDeliversInvalidDataErrorOn200HTTPResponseWithEmptyData()",
+        "CharacterDataMapperTests\/testMapDeliversReceivedNonEmptyDataOn200HTTPResponse()",
+        "CharacterDataMapperTests\/testMapThrowsErrorOnNon200HTTPResponse()",
+        "CharacterItemsMapperTests\/testMapDeliversItemsOn200HTTPResponseWithJSONItems()",
+        "CharacterItemsMapperTests\/testMapDeliversNoItemsOn200HTTPResponseWithEmptyJSONList()",
+        "CharacterItemsMapperTests\/testMapThrowsErrorOn200HTTPResponseWithInvalidJSON()",
+        "CharacterItemsMapperTests\/testMapThrowsErrorOnNon200HTTPResponse()",
+        "CharactersEndpointTests\/testCharactersEndpointURL()",
+        "CharactersEndpointTests\/testCharactersEndpointURLAfterGivenImage()",
+        "IntroViewTests\/testEnterButton()",
+        "IntroViewTests\/testLogoIntroImage()",
+        "IntroViewTests\/testMessageText()",
+        "RickAndMortyTests\/testExample()",
+        "RickAndMortyTests\/testPerformanceExample()",
+        "URLSessionHTTPClientTests\/testCancelGetFromURLTaskCancelsURLRequest()",
+        "URLSessionHTTPClientTests\/testGetFromURLFailsOnAllInvalidRepresentationCases()",
+        "URLSessionHTTPClientTests\/testGetFromURLFailsOnRequestError()",
+        "URLSessionHTTPClientTests\/testGetFromURLPerformsGETRequestWithURL()",
+        "URLSessionHTTPClientTests\/testGetFromURLSucceedsOnHTTPURLResponseWithData()",
+        "URLSessionHTTPClientTests\/testGetFromURLSucceedsWithEmptyDataOnHTTPURLResponseWithNilData()"
+      ],
+      "target" : {
+        "containerPath" : "container:RickAndMorty.xcodeproj",
+        "identifier" : "C4FC957A2AC2681B004F6C4D",
+        "name" : "RickAndMortyTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:RickAndMorty.xcodeproj",
+        "identifier" : "C4FC95842AC2681B004F6C4D",
+        "name" : "RickAndMortyUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

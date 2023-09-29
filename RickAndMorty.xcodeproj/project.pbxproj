@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4012EA12AC6563800FAD18D /* IntroViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4012EA02AC6563800FAD18D /* IntroViewTests.swift */; };
+		C4012EA52AC65A2300FAD18D /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4012EA42AC65A2300FAD18D /* IntroViewModel.swift */; };
 		C422FBE92AC4D1CD0033B5CB /* RyckAndMortyCharactersListStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C422FBE82AC4D1CD0033B5CB /* RyckAndMortyCharactersListStub.swift */; };
 		C422FBEB2AC4DE780033B5CB /* PaginationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C422FBEA2AC4DE780033B5CB /* PaginationState.swift */; };
 		C4376D492AC36AA9003119CD /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4376D482AC36AA9003119CD /* CharacterListViewModel.swift */; };
@@ -26,6 +28,7 @@
 		C49FE2F42AC3DAAE00D27AED /* CharacterItemsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FE2F32AC3DAAE00D27AED /* CharacterItemsMapperTests.swift */; };
 		C4C4988C2AC538A900880D33 /* FetchCharacterListAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4988A2AC5385200880D33 /* FetchCharacterListAPI.swift */; };
 		C4C4988E2AC544CA00880D33 /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C4988D2AC544CA00880D33 /* Rechability.swift */; };
+		C4C498912AC550DE00880D33 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = C4C498902AC550DE00880D33 /* ViewInspector */; };
 		C4CA0F4C2AC325FE0045D386 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F4B2AC325FE0045D386 /* CharacterListView.swift */; };
 		C4CA0F4E2AC326AC0045D386 /* CharacterItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F4D2AC326AC0045D386 /* CharacterItemView.swift */; };
 		C4CA0F502AC327890045D386 /* RyckAndMortyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F4F2AC327890045D386 /* RyckAndMortyCharacter.swift */; };
@@ -67,6 +70,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4012E9D2AC64ED600FAD18D /* MainTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MainTestPlan.xctestplan; sourceTree = "<group>"; };
+		C4012EA02AC6563800FAD18D /* IntroViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewTests.swift; sourceTree = "<group>"; };
+		C4012EA42AC65A2300FAD18D /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
 		C422FBE82AC4D1CD0033B5CB /* RyckAndMortyCharactersListStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyckAndMortyCharactersListStub.swift; sourceTree = "<group>"; };
 		C422FBEA2AC4DE780033B5CB /* PaginationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationState.swift; sourceTree = "<group>"; };
 		C4376D482AC36AA9003119CD /* CharacterListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C498912AC550DE00880D33 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +264,7 @@
 		C4FC95622AC26819004F6C4D = {
 			isa = PBXGroup;
 			children = (
+				C4012E9D2AC64ED600FAD18D /* MainTestPlan.xctestplan */,
 				C4FC956D2AC26819004F6C4D /* RickAndMorty */,
 				C4FC957E2AC2681B004F6C4D /* RickAndMortyTests */,
 				C4FC95882AC2681B004F6C4D /* RickAndMortyUITests */,
@@ -352,6 +360,7 @@
 		C4FC959B2AC2683E004F6C4D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C4012EA42AC65A2300FAD18D /* IntroViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -510,6 +519,7 @@
 		C4FC95AE2AC2684E004F6C4D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C4012EA02AC6563800FAD18D /* IntroViewTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -651,6 +661,9 @@
 				C4FC957D2AC2681B004F6C4D /* PBXTargetDependency */,
 			);
 			name = RickAndMortyTests;
+			packageProductDependencies = (
+				C4C498902AC550DE00880D33 /* ViewInspector */,
+			);
 			productName = RickAndMortyTests;
 			productReference = C4FC957B2AC2681B004F6C4D /* RickAndMortyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -708,6 +721,7 @@
 			packageReferences = (
 				C4FC95B52AC26A45004F6C4D /* XCRemoteSwiftPackageReference "swiftlint-plugin" */,
 				C49FE2E22AC3D1EB00D27AED /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				C4C4988F2AC550DE00880D33 /* XCRemoteSwiftPackageReference "ViewInspector" */,
 			);
 			productRefGroup = C4FC956C2AC26819004F6C4D /* Products */;
 			projectDirPath = "";
@@ -762,6 +776,7 @@
 				C49FE2D32AC3C13F00D27AED /* HTTPURLResponseStatusCode.swift in Sources */,
 				C422FBEB2AC4DE780033B5CB /* PaginationState.swift in Sources */,
 				C49FE2D92AC3C77B00D27AED /* CharactersEndPoint.swift in Sources */,
+				C4012EA52AC65A2300FAD18D /* IntroViewModel.swift in Sources */,
 				C4FC95C72AC2762F004F6C4D /* IntroLocalizable.swift in Sources */,
 				C49FE2D52AC3C17B00D27AED /* CharacterItemsMapper.swift in Sources */,
 				C4CA0F4C2AC325FE0045D386 /* CharacterListView.swift in Sources */,
@@ -785,6 +800,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4012EA12AC6563800FAD18D /* IntroViewTests.swift in Sources */,
 				C4E6F06E2AC48D1B00BCC601 /* CharacterDataMapperTests.swift in Sources */,
 				C4FC95802AC2681B004F6C4D /* RickAndMortyTests.swift in Sources */,
 				C49FE2F42AC3DAAE00D27AED /* CharacterItemsMapperTests.swift in Sources */,
@@ -1023,9 +1039,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quimalabs.RickAndMortyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RickAndMorty.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RickAndMorty";
 			};
 			name = Debug;
@@ -1043,9 +1062,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quimalabs.RickAndMortyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RickAndMorty.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RickAndMorty";
 			};
 			name = Release;
@@ -1132,8 +1154,16 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.1.1;
+				kind = exactVersion;
+				version = 2.1.1;
+			};
+		};
+		C4C4988F2AC550DE00880D33 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = exactVersion;
+				version = 0.9.8;
 			};
 		};
 		C4FC95B52AC26A45004F6C4D /* XCRemoteSwiftPackageReference "swiftlint-plugin" */ = {
@@ -1151,6 +1181,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C49FE2E22AC3D1EB00D27AED /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
+		};
+		C4C498902AC550DE00880D33 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4C4988F2AC550DE00880D33 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
 		};
 		C4FC95B62AC26A68004F6C4D /* SwiftLintPlugin */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -34,6 +34,38 @@
             endingLineNumber = "42"
             landmarkName = "loadCharacters(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0133A8F9-121A-4149-B948-D4F7CD653EF8 - 41f9ba6e22b56ea7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RickAndMorty.FetchCharacterListAPI.loadCharacters((Swift.Array&lt;RickAndMorty.RyckAndMortyCharacter&gt;, RickAndMorty.PaginationState) -&gt; ()) -&gt; ()"
+                  moduleName = "RickAndMorty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raul/Documents/Quimalabs/RickAndMorty/RickAndMorty/Scenes/CharacterList/API/FetchCharacterListAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "821">
+               </Location>
+               <Location
+                  uuid = "0133A8F9-121A-4149-B948-D4F7CD653EF8 - dc1e36d6556f8c61"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in RickAndMorty.FetchCharacterListAPI.loadCharacters((Swift.Array&lt;RickAndMorty.RyckAndMortyCharacter&gt;, RickAndMorty.PaginationState) -&gt; ()) -&gt; ()"
+                  moduleName = "RickAndMorty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raul/Documents/Quimalabs/RickAndMorty/RickAndMorty/Scenes/CharacterList/API/FetchCharacterListAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
