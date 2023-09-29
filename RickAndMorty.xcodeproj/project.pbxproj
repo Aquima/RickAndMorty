@@ -68,7 +68,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C4012E9C2AC64E8E00FAD18D /* MainTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainTestPlan.xctestplan; sourceTree = SOURCE_ROOT; };
 		C4012E9D2AC64ED600FAD18D /* MainTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MainTestPlan.xctestplan; sourceTree = "<group>"; };
 		C422FBE82AC4D1CD0033B5CB /* RyckAndMortyCharactersListStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyckAndMortyCharactersListStub.swift; sourceTree = "<group>"; };
 		C422FBEA2AC4DE780033B5CB /* PaginationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationState.swift; sourceTree = "<group>"; };
@@ -303,7 +302,6 @@
 		C4FC957E2AC2681B004F6C4D /* RickAndMortyTests */ = {
 			isa = PBXGroup;
 			children = (
-				C4012E9C2AC64E8E00FAD18D /* MainTestPlan.xctestplan */,
 				C49FE2EB2AC3D82D00D27AED /* sharedTestHelper */,
 				C4FC95B32AC26888004F6C4D /* testCommons */,
 				C4FC95A62AC2684E004F6C4D /* testScenes */,

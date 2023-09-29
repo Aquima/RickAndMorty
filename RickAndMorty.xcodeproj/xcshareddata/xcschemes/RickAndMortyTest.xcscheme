@@ -32,9 +32,6 @@
             reference = "container:RickAndMortyTest.xctestplan"
             default = "YES">
          </TestPlanReference>
-         <TestPlanReference
-            reference = "container:MainTestPlan.xctestplan">
-         </TestPlanReference>
       </TestPlans>
       <Testables>
          <TestableReference
