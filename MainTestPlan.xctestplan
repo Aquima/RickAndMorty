@@ -35,7 +35,6 @@
   },
   "testTargets" : [
     {
-      "parallelizable" : true,
       "selectedTests" : [
         "CharacterDataMapperTests\/testMapDeliversInvalidDataErrorOn200HTTPResponseWithEmptyData()",
         "CharacterDataMapperTests\/testMapDeliversReceivedNonEmptyDataOn200HTTPResponse()",
@@ -44,6 +43,10 @@
         "CharacterItemsMapperTests\/testMapDeliversNoItemsOn200HTTPResponseWithEmptyJSONList()",
         "CharacterItemsMapperTests\/testMapThrowsErrorOn200HTTPResponseWithInvalidJSON()",
         "CharacterItemsMapperTests\/testMapThrowsErrorOnNon200HTTPResponse()",
+        "CharacterListViewTests\/testCharacterLastRowViewNotNil()",
+        "CharacterListViewTests\/testListCurrentPath()",
+        "CharacterListViewTests\/testListNotNil()",
+        "CharacterListViewTests\/testNavigationStackTitle()",
         "CharactersEndpointTests\/testCharactersEndpointURL()",
         "CharactersEndpointTests\/testCharactersEndpointURLAfterGivenImage()",
         "IntroViewTests\/testEnterButton()",

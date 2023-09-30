@@ -10,7 +10,7 @@ import Combine
 
 final class CharacterListViewModel: ObservableObject {
     private var service: CharacterListViewModelProtocol?
-
+    private(set) var titleNavigation = "Characters"
     @Published private(set) var previewCharacters: [RyckAndMortyCharacter] = []
     @Published private(set) var paginationState: PaginationState = .loadMore
 

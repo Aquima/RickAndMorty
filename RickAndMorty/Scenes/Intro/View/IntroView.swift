@@ -25,7 +25,11 @@ struct IntroView: View {
                 VStack(spacing: 20, content: {
                     messageText
                     enterButton
+
                 })
+                .navigationDestination(isPresented: $showingCharacterListView) {
+                    CharacterListView()
+                }
             })
             .background {
                 Image(viewModel.background, bundle: .main)
@@ -53,9 +57,6 @@ struct IntroView: View {
         .padding(.trailing, 40)
         .buttonStyle(FenixButtonStyle())
         .id(viewModel.idEnterButton)
-        .navigationDestination(isPresented: $showingCharacterListView) {
-            CharacterListView()
-        }
     }
 
     private var messageText: some View {
