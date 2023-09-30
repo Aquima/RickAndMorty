@@ -18,7 +18,6 @@
 		C49FE2D72AC3C72000D27AED /* CharacterDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FE2D62AC3C72000D27AED /* CharacterDataMapper.swift */; };
 		C49FE2D92AC3C77B00D27AED /* CharactersEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FE2D82AC3C77B00D27AED /* CharactersEndPoint.swift */; };
 		C49FE2DC2AC3C8BE00D27AED /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FE2DB2AC3C8BE00D27AED /* HTTPClient.swift */; };
-		C49FE2DE2AC3C8DD00D27AED /* Paginated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FE2DD2AC3C8DD00D27AED /* Paginated.swift */; };
 		C49FE2E12AC3CA8500D27AED /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FE2E02AC3CA8500D27AED /* URLSessionHTTPClient.swift */; };
 		C49FE2E42AC3D1EB00D27AED /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = C49FE2E32AC3D1EB00D27AED /* CachedAsyncImage */; };
 		C49FE2E72AC3D78600D27AED /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FE2E62AC3D78600D27AED /* URLSessionHTTPClientTests.swift */; };
@@ -33,6 +32,7 @@
 		C4CA0F4E2AC326AC0045D386 /* CharacterItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F4D2AC326AC0045D386 /* CharacterItemView.swift */; };
 		C4CA0F502AC327890045D386 /* RyckAndMortyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F4F2AC327890045D386 /* RyckAndMortyCharacter.swift */; };
 		C4CA0F562AC3292F0045D386 /* StaticJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F552AC3292F0045D386 /* StaticJSONMapper.swift */; };
+		C4DF5A532AC7D1D500761E72 /* CharacterListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF5A522AC7D1D500761E72 /* CharacterListViewTests.swift */; };
 		C4E6F06C2AC4843C00BCC601 /* CharactersEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E6F06B2AC4843C00BCC601 /* CharactersEndpointTests.swift */; };
 		C4E6F06E2AC48D1B00BCC601 /* CharacterDataMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E6F06D2AC48D1B00BCC601 /* CharacterDataMapperTests.swift */; };
 		C4FC956F2AC26819004F6C4D /* RickAndMortyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC956E2AC26819004F6C4D /* RickAndMortyApp.swift */; };
@@ -82,7 +82,6 @@
 		C49FE2D62AC3C72000D27AED /* CharacterDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataMapper.swift; sourceTree = "<group>"; };
 		C49FE2D82AC3C77B00D27AED /* CharactersEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersEndPoint.swift; sourceTree = "<group>"; };
 		C49FE2DB2AC3C8BE00D27AED /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		C49FE2DD2AC3C8DD00D27AED /* Paginated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginated.swift; sourceTree = "<group>"; };
 		C49FE2E02AC3CA8500D27AED /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		C49FE2E62AC3D78600D27AED /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		C49FE2E92AC3D7E300D27AED /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
@@ -96,6 +95,7 @@
 		C4CA0F4F2AC327890045D386 /* RyckAndMortyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyckAndMortyCharacter.swift; sourceTree = "<group>"; };
 		C4CA0F532AC328DC0045D386 /* RickAndMortyCharacters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RickAndMortyCharacters.json; sourceTree = "<group>"; };
 		C4CA0F552AC3292F0045D386 /* StaticJSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticJSONMapper.swift; sourceTree = "<group>"; };
+		C4DF5A522AC7D1D500761E72 /* CharacterListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewTests.swift; sourceTree = "<group>"; };
 		C4E6F06B2AC4843C00BCC601 /* CharactersEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersEndpointTests.swift; sourceTree = "<group>"; };
 		C4E6F06D2AC48D1B00BCC601 /* CharacterDataMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataMapperTests.swift; sourceTree = "<group>"; };
 		C4FC956B2AC26819004F6C4D /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,7 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				C49FE2DB2AC3C8BE00D27AED /* HTTPClient.swift */,
-				C49FE2DD2AC3C8DD00D27AED /* Paginated.swift */,
 			);
 			path = "Shared API";
 			sourceTree = "<group>";
@@ -488,6 +487,7 @@
 		C4FC95AA2AC2684E004F6C4D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C4DF5A522AC7D1D500761E72 /* CharacterListViewTests.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -784,7 +784,6 @@
 				C4CA0F562AC3292F0045D386 /* StaticJSONMapper.swift in Sources */,
 				C49FE2D72AC3C72000D27AED /* CharacterDataMapper.swift in Sources */,
 				C4C4988E2AC544CA00880D33 /* Rechability.swift in Sources */,
-				C49FE2DE2AC3C8DD00D27AED /* Paginated.swift in Sources */,
 				C4CA0F502AC327890045D386 /* RyckAndMortyCharacter.swift in Sources */,
 				C4FC956F2AC26819004F6C4D /* RickAndMortyApp.swift in Sources */,
 				C4FC95D52AC285DD004F6C4D /* FenixTextStyle.swift in Sources */,
@@ -804,6 +803,7 @@
 				C4E6F06E2AC48D1B00BCC601 /* CharacterDataMapperTests.swift in Sources */,
 				C4FC95802AC2681B004F6C4D /* RickAndMortyTests.swift in Sources */,
 				C49FE2F42AC3DAAE00D27AED /* CharacterItemsMapperTests.swift in Sources */,
+				C4DF5A532AC7D1D500761E72 /* CharacterListViewTests.swift in Sources */,
 				C49FE2EA2AC3D7E300D27AED /* URLProtocolStub.swift in Sources */,
 				C49FE2F02AC3D8D100D27AED /* XCTestCaseMemoryLeakTracking.swift in Sources */,
 				C4E6F06C2AC4843C00BCC601 /* CharactersEndpointTests.swift in Sources */,

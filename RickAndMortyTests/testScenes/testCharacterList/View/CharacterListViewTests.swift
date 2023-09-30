@@ -6,30 +6,38 @@
 //
 
 import XCTest
+import ViewInspector
+@testable import RickAndMorty
 
 final class CharacterListViewTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testListNotNil() throws {
+        let sut = CharacterListView()
+        let expectId = "CharactersList"
+        let list = try sut.inspect().find(viewWithId: expectId)
+        XCTAssertNotNil(list)
+    }
+    
+    func testCharacterLastRowViewNotNil() throws {
+        let sut = CharacterListView()
+        let body = sut.body
+        XCTAssertNotNil(body)
+        let expectId = "CharacterLastRowView"
+        let characterListView = try sut.inspect().find(viewWithId: expectId)
+        XCTAssertNotNil(characterListView)
+    }
+    
+    func testListCurrentPath() throws {
+        let sut = CharacterListView()
+        XCTAssertEqual(try sut.inspect().find(ViewType.List.self).pathToRoot,
+                       "view(CharacterListView.self).navigationStack().list()")
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testNavigationStackTitle() throws {
+        let sut = CharacterListView()
+        let expect = "Characters"
+        let titleNavigation = sut.viewModel.titleNavigation
+        XCTAssertEqual(titleNavigation, expect)
     }
 
 }

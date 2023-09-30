@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CharacterListView: View {
-    @ObservedObject private var viewModel: CharacterListViewModel
+    @ObservedObject private(set) var viewModel: CharacterListViewModel
 
     init() {
         _viewModel = ObservedObject(wrappedValue: CharacterListViewModel())
@@ -27,12 +27,14 @@ struct CharacterListView: View {
                                      loadMoreItems: viewModel.loadMoreItems)
                     .background(.white)
                     .listRowSeparator(.hidden)
+                    .id("CharacterLastRowView")
             }
             .listStyle(.plain)
-            .navigationTitle("Characters")
+            .navigationTitle(viewModel.titleNavigation)
             .font(.subheadline)
             .background(.white)
             .padding([.leading, .trailing], 0)
+            .id("CharactersList")
         }
     }
 

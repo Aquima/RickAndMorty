@@ -31,6 +31,7 @@ final class FetchCharacterListAPI: CharacterListViewModelProtocol {
         self.reachability = reachability
 
     }
+
     func loadCharacters(_ handler: @escaping ([RyckAndMortyCharacter], PaginationState) -> Void) {
         guard reachability.isConnectedToNetwork() && currentNumberOfAttempts != maxNumberOfAttempts else {
             handler([], .noResults)
