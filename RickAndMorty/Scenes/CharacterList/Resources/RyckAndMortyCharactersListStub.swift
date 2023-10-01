@@ -7,7 +7,7 @@
 
 import Foundation
 struct RyckAndMortyCharactersListStub {
-    static let previewCharacters =
+    static let previewCharacters: [RyckAndMortyCharacter] =
     [RyckAndMortyCharacter(id: UUID(),
                            dbid: 1,
                            name: "Rick",

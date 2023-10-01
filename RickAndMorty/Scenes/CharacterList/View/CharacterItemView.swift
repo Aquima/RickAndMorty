@@ -10,60 +10,33 @@ import CachedAsyncImage
 
 struct CharacterItemView: View {
 
-    let character: RyckAndMortyCharacter
+    @Binding var character: RyckAndMortyCharacter
 
     var body: some View {
-        VStack(spacing: .zero) {
-            headerCharacterItem
+        HStack {
             imageCharacterLoader
-        }
-        .background(.clear)
-    }
-
-    var headerCharacterItem: some View {
-        HStack(alignment: .center) {
-            Image(systemName: "person.fill")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 15, height: 15)
-                .clipped()
-                .clipShape(Rectangle())
-
             VStack(alignment: .leading) {
-                Text(character.name)
-                    .fontWeight(.bold)
-                    .fenixTitleCharacterTextStyled
+                Text(character.name).fenixTitleCharacterTextStyled
                 Text(character.status.rawValue)
-                    .fenixTextStyled
+                    .fenixTextStyled(character.status)
             }
         }
-        .frame(maxWidth: .infinity,
-               alignment: .leading)
-        .padding([.leading, .trailing], 10)
-        .padding(.vertical, 15)
-        .background(.clear)
     }
+
     var imageCharacterLoader: some View {
         CachedAsyncImage(url: .init(string: character.image)) { image in
             image.resizable()
-                 .aspectRatio(contentMode: .fill)
-                 .frame(maxWidth: .infinity,
-                        alignment: .center)
-                 .clipped()
-                 .padding([.leading, .trailing], 0)
+                .frame(width: 150, height: 150)
+                .border(Color.black.opacity(0.5), width: 2)
         } placeholder: {
             ProgressView()
-                .frame(height: 250,
+                .frame(height: 45,
                        alignment: .center)
         }
     }
 }
 
 #Preview {
-    let previewCharacter = RyckAndMortyCharacter(id: UUID(), dbid: 1,
-                                                 name: "Rick",
-                                                 status: .alive,
-                                                 image: "https://rickandmortyapi.com/api/character/avatar/1.jpeg")
-    return CharacterItemView(character: previewCharacter)
+    return CharacterItemView(character: .constant(RyckAndMortyCharactersListStub.previewCharacters[0]))
 
 }
