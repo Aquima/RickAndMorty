@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct IntroView: View {
-    // MARK: - State Properties
-    @State private var moveOscillationPath = false
-    @State private var showingCharacterListView: Bool = false
+
     // MARK: - ObservedObject Properties
     @ObservedObject private var viewModel: IntroViewModel
 
@@ -26,7 +24,7 @@ struct IntroView: View {
                     messageText
                     enterButton
                 })
-                .navigationDestination(isPresented: $showingCharacterListView) {
+                .navigationDestination(isPresented: $viewModel.showingCharacterListView) {
                     CharacterListView()
                 }
             })
@@ -47,7 +45,7 @@ struct IntroView: View {
 
     private var enterButton: some View {
         Button(action: {
-            showingCharacterListView.toggle()
+            viewModel.showingCharacterListView.toggle()
         }, label: {
             Text(viewModel.titleButton)
         })
