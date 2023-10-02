@@ -35,31 +35,8 @@
   },
   "testTargets" : [
     {
-      "selectedTests" : [
-        "CharacterDataMapperTests\/testMapDeliversInvalidDataErrorOn200HTTPResponseWithEmptyData()",
-        "CharacterDataMapperTests\/testMapDeliversReceivedNonEmptyDataOn200HTTPResponse()",
-        "CharacterDataMapperTests\/testMapThrowsErrorOnNon200HTTPResponse()",
-        "CharacterItemsMapperTests\/testMapDeliversItemsOn200HTTPResponseWithJSONItems()",
-        "CharacterItemsMapperTests\/testMapDeliversNoItemsOn200HTTPResponseWithEmptyJSONList()",
-        "CharacterItemsMapperTests\/testMapThrowsErrorOn200HTTPResponseWithInvalidJSON()",
-        "CharacterItemsMapperTests\/testMapThrowsErrorOnNon200HTTPResponse()",
-        "CharacterListViewTests\/testCharacterLastRowViewNotNil()",
-        "CharacterListViewTests\/testListCurrentPath()",
-        "CharacterListViewTests\/testListNotNil()",
-        "CharacterListViewTests\/testNavigationStackTitle()",
-        "CharactersEndpointTests\/testCharactersEndpointURL()",
-        "CharactersEndpointTests\/testCharactersEndpointURLAfterGivenImage()",
-        "IntroViewTests\/testEnterButton()",
-        "IntroViewTests\/testLogoIntroImage()",
-        "IntroViewTests\/testMessageText()",
-        "RickAndMortyTests\/testExample()",
-        "RickAndMortyTests\/testPerformanceExample()",
-        "URLSessionHTTPClientTests\/testCancelGetFromURLTaskCancelsURLRequest()",
-        "URLSessionHTTPClientTests\/testGetFromURLFailsOnAllInvalidRepresentationCases()",
-        "URLSessionHTTPClientTests\/testGetFromURLFailsOnRequestError()",
-        "URLSessionHTTPClientTests\/testGetFromURLPerformsGETRequestWithURL()",
-        "URLSessionHTTPClientTests\/testGetFromURLSucceedsOnHTTPURLResponseWithData()",
-        "URLSessionHTTPClientTests\/testGetFromURLSucceedsWithEmptyDataOnHTTPURLResponseWithNilData()"
+      "skippedTests" : [
+        "CharacterItemViewTests\/testTextImageNotNil()"
       ],
       "target" : {
         "containerPath" : "container:RickAndMorty.xcodeproj",

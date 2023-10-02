@@ -10,7 +10,7 @@ import SwiftUI
 struct IntroView: View {
     // MARK: - State Properties
     @State private var moveOscillationPath = false
-    @State private var showingCharacterListView = false
+    @State private var showingCharacterListView: Bool = false
     // MARK: - ObservedObject Properties
     @ObservedObject private var viewModel: IntroViewModel
 
@@ -25,7 +25,6 @@ struct IntroView: View {
                 VStack(spacing: 20, content: {
                     messageText
                     enterButton
-
                 })
                 .navigationDestination(isPresented: $showingCharacterListView) {
                     CharacterListView()
