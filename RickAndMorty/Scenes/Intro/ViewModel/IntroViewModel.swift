@@ -9,6 +9,9 @@ import Foundation
 import Combine
 
 final class IntroViewModel: ObservableObject {
+
+    @Published var showingCharacterListView: Bool = false
+
     let background: String = AssetsIntro.background.name
     let logoIntro: String = AssetsIntro.logo.name
     let titleButton: String = IntroLocalizable.Title.Button.normal
