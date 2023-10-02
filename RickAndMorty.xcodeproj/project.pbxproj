@@ -32,7 +32,6 @@
 		C4CA0F4C2AC325FE0045D386 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F4B2AC325FE0045D386 /* CharacterListView.swift */; };
 		C4CA0F4E2AC326AC0045D386 /* CharacterItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F4D2AC326AC0045D386 /* CharacterItemView.swift */; };
 		C4CA0F502AC327890045D386 /* RyckAndMortyCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F4F2AC327890045D386 /* RyckAndMortyCharacter.swift */; };
-		C4CA0F562AC3292F0045D386 /* StaticJSONMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA0F552AC3292F0045D386 /* StaticJSONMapper.swift */; };
 		C4DF5A532AC7D1D500761E72 /* CharacterListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF5A522AC7D1D500761E72 /* CharacterListViewTests.swift */; };
 		C4E6F06C2AC4843C00BCC601 /* CharactersEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E6F06B2AC4843C00BCC601 /* CharactersEndpointTests.swift */; };
 		C4E6F06E2AC48D1B00BCC601 /* CharacterDataMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E6F06D2AC48D1B00BCC601 /* CharacterDataMapperTests.swift */; };
@@ -98,7 +97,6 @@
 		C4CA0F4D2AC326AC0045D386 /* CharacterItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterItemView.swift; sourceTree = "<group>"; };
 		C4CA0F4F2AC327890045D386 /* RyckAndMortyCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyckAndMortyCharacter.swift; sourceTree = "<group>"; };
 		C4CA0F532AC328DC0045D386 /* RickAndMortyCharacters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RickAndMortyCharacters.json; sourceTree = "<group>"; };
-		C4CA0F552AC3292F0045D386 /* StaticJSONMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticJSONMapper.swift; sourceTree = "<group>"; };
 		C4DF5A522AC7D1D500761E72 /* CharacterListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewTests.swift; sourceTree = "<group>"; };
 		C4E6F06B2AC4843C00BCC601 /* CharactersEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersEndpointTests.swift; sourceTree = "<group>"; };
 		C4E6F06D2AC48D1B00BCC601 /* CharacterDataMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataMapperTests.swift; sourceTree = "<group>"; };
@@ -261,7 +259,6 @@
 		C4CA0F542AC329170045D386 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				C4CA0F552AC3292F0045D386 /* StaticJSONMapper.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -807,7 +804,6 @@
 				C49FE2D52AC3C17B00D27AED /* CharacterItemsMapper.swift in Sources */,
 				C4CA0F4C2AC325FE0045D386 /* CharacterListView.swift in Sources */,
 				C49FE2E12AC3CA8500D27AED /* URLSessionHTTPClient.swift in Sources */,
-				C4CA0F562AC3292F0045D386 /* StaticJSONMapper.swift in Sources */,
 				C49FE2D72AC3C72000D27AED /* CharacterDataMapper.swift in Sources */,
 				C4C4988E2AC544CA00880D33 /* Rechability.swift in Sources */,
 				C4CA0F502AC327890045D386 /* RyckAndMortyCharacter.swift in Sources */,

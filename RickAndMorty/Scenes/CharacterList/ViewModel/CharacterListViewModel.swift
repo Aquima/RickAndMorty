@@ -13,6 +13,7 @@ final class CharacterListViewModel: ObservableObject {
     private(set) var titleNavigation = "Characters"
     @Published private(set) var previewCharacters: [RyckAndMortyCharacter] = []
     @Published private(set) var paginationState: PaginationState = .loadMore
+    var searchName: String = ""
 
     init(characters: [RyckAndMortyCharacter] = []) {
         self.previewCharacters = characters
@@ -25,7 +26,7 @@ final class CharacterListViewModel: ObservableObject {
     }
 
     private func fetchCharacters() {
-        service?.loadCharacters({ characters, paginationState in
+        service?.loadCharacters(searchName, { characters, paginationState in
             self.previewCharacters = characters
             self.paginationState = paginationState
         })
