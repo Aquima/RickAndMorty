@@ -12,17 +12,19 @@ extension View {
         self.font(.custom("Helvetica-Regular", size: 14))
             .foregroundColor(.white)
     }
+
     func fenixTextStyled(_ status: Status) -> some View {
+        self.font(.custom("Helvetica-Bold", size: 17)).foregroundColor(getColor(status))
+    }
+
+    private func getColor(_ status: Status) -> Color {
         switch status {
         case .dead:
-            self.font(.custom("Helvetica-Bold", size: 17))
-                .foregroundColor(.red)
+            return .red
         case .alive:
-            self.font(.custom("Helvetica-Bold", size: 17))
-                .foregroundColor(.green)
+            return .green
         case .unknown:
-            self.font(.custom("Helvetica-Bold", size: 17))
-                .foregroundColor(.yellow)
+            return .yellow
         }
     }
     var fenixTitleCharacterTextStyled: some View {

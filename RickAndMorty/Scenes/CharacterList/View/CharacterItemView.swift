@@ -16,9 +16,12 @@ struct CharacterItemView: View {
         HStack {
             imageCharacterLoader
             VStack(alignment: .leading) {
-                Text(character.name).fenixTitleCharacterTextStyled
+                Text(character.name)
+                    .fenixTitleCharacterTextStyled
+                    .id("CharacterName")
                 Text(character.status.rawValue)
                     .fenixTextStyled(character.status)
+                    .id("CharacterStatus")
             }
         }
     }
@@ -28,6 +31,7 @@ struct CharacterItemView: View {
             image.resizable()
                 .frame(width: 150, height: 150)
                 .border(Color.black.opacity(0.5), width: 2)
+                .id("CharacterImage")
         } placeholder: {
             ProgressView()
                 .frame(height: 45,

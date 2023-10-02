@@ -28,8 +28,8 @@
         }
       ],
       "color" : {
-        "platform" : "ios",
-        "reference" : "darkTextColor"
+        "platform" : "universal",
+        "reference" : "labelColor"
       },
       "idiom" : "universal"
     }
