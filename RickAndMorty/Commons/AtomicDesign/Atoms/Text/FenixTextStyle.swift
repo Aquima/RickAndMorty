@@ -8,11 +8,11 @@
 import SwiftUI
 
 extension View {
-    var fenixTextStyled: some View {
-        self.font(.custom("Helvetica-Regular", size: 14))
-            .foregroundColor(.white)
-    }
 
+    var fenixMessageTextStyled: some View {
+        self.font(.custom("Helvetica-Regular", size: 14))
+            .foregroundColor(FenixColor.messageTextColor.swiftUIColor)
+    }
     func fenixTextStyled(_ status: Status) -> some View {
         self.font(.custom("Helvetica-Bold", size: 17)).foregroundColor(getColor(status))
     }
@@ -29,6 +29,6 @@ extension View {
     }
     var fenixTitleCharacterTextStyled: some View {
         self.font(.custom("GetSchwifty-Regular", size: 20))
-            .foregroundColor(.black)
+            .foregroundColor(FenixColor.characterTitleColor.swiftUIColor)
     }
 }

@@ -13,7 +13,8 @@ struct FenixButtonStyle: ButtonStyle {
         configuration
             .label
             .font(.custom("GetSchwifty-Regular", size: 30))
-            .foregroundColor(configuration.isPressed ? .white.opacity(0.5) : .white)
+            .foregroundColor(configuration.isPressed ? FenixColor.titleButttonColor.swiftUIColor.opacity(0.5) :
+                                FenixColor.titleButttonColor.swiftUIColor)
             .animation(.easeOut(duration: 1.0), value: configuration.isPressed)
     }
 }

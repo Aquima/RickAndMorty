@@ -61,7 +61,7 @@ struct IntroView: View {
             .multilineTextAlignment(.center)
             .padding(.leading, 40)
             .padding(.trailing, 40)
-            .fenixTextStyled
+            .fenixMessageTextStyled
             .id(viewModel.idMessageText)
     }
 }

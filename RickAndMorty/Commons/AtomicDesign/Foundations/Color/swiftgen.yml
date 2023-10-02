@@ -1,0 +1,11 @@
+ xcassets:
+   inputs:
+     - Colors.xcassets
+#     - ProFeatures.xcassets
+   outputs:
+     - templateName: swift5
+       params:
+         forceProvidesNamespaces: true
+         enumName: FenixColor
+         publicAccess: public
+       output: FenixColor.swift

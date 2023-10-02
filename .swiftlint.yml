@@ -1,4 +1,4 @@
 excluded:
 - RickAndMorty/Scenes/Intro/Resources/AssetsIntro.swift
 - RickAndMorty/Scenes/Intro/Resources/IntroLocalizable.swift
-  
+- RickAndMorty/Commons/AtomicDesign/Foundations/Color/FenixColor.swift
