@@ -51,6 +51,8 @@
 		C4FC95CE2AC279A0004F6C4D /* FenixButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC95CD2AC279A0004F6C4D /* FenixButtonStyle.swift */; };
 		C4FC95D22AC27CAB004F6C4D /* get_schwifty.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4FC95D02AC27B4C004F6C4D /* get_schwifty.ttf */; };
 		C4FC95D52AC285DD004F6C4D /* FenixTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FC95D42AC285DD004F6C4D /* FenixTextStyle.swift */; };
+		C4FEAAB22ACA7E2F00ACFF05 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FEAAB12ACA7E2E00ACFF05 /* Colors.xcassets */; };
+		C4FEAAB42ACA800400ACFF05 /* FenixColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FEAAB32ACA800400ACFF05 /* FenixColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,8 @@
 		C4FC95D02AC27B4C004F6C4D /* get_schwifty.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = get_schwifty.ttf; sourceTree = "<group>"; };
 		C4FC95D12AC27BC2004F6C4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C4FC95D42AC285DD004F6C4D /* FenixTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FenixTextStyle.swift; sourceTree = "<group>"; };
+		C4FEAAB12ACA7E2E00ACFF05 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C4FEAAB32ACA800400ACFF05 /* FenixColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FenixColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -588,6 +592,7 @@
 		C4FC95CA2AC27958004F6C4D /* AtomicDesign */ = {
 			isa = PBXGroup;
 			children = (
+				C4FEAAAF2ACA7E1600ACFF05 /* Foundations */,
 				C4FC95CB2AC27979004F6C4D /* Atoms */,
 			);
 			path = AtomicDesign;
@@ -624,6 +629,23 @@
 				C4FC95D42AC285DD004F6C4D /* FenixTextStyle.swift */,
 			);
 			path = Text;
+			sourceTree = "<group>";
+		};
+		C4FEAAAF2ACA7E1600ACFF05 /* Foundations */ = {
+			isa = PBXGroup;
+			children = (
+				C4FEAAB02ACA7E1C00ACFF05 /* Color */,
+			);
+			path = Foundations;
+			sourceTree = "<group>";
+		};
+		C4FEAAB02ACA7E1C00ACFF05 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				C4FEAAB32ACA800400ACFF05 /* FenixColor.swift */,
+				C4FEAAB12ACA7E2E00ACFF05 /* Colors.xcassets */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -748,6 +770,7 @@
 				C4FC95C02AC26F9A004F6C4D /* swiftgen.yml in Resources */,
 				C4FC95D22AC27CAB004F6C4D /* get_schwifty.ttf in Resources */,
 				C4FC95C92AC276B4004F6C4D /* IntroLocalizable.strings in Resources */,
+				C4FEAAB22ACA7E2F00ACFF05 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,6 +815,7 @@
 				C4FC95D52AC285DD004F6C4D /* FenixTextStyle.swift in Sources */,
 				C422FBE92AC4D1CD0033B5CB /* RyckAndMortyCharactersListStub.swift in Sources */,
 				C49FE2CA2AC3B56900D27AED /* CharacterLastRowView.swift in Sources */,
+				C4FEAAB42ACA800400ACFF05 /* FenixColor.swift in Sources */,
 				C4C4988C2AC538A900880D33 /* FetchCharacterListAPI.swift in Sources */,
 				C4FC95B92AC26C38004F6C4D /* IntroView.swift in Sources */,
 				C4FC95C42AC27463004F6C4D /* AssetsIntro.swift in Sources */,

@@ -11,11 +11,6 @@ struct CharacterListView: View {
     @ObservedObject private(set) var viewModel: CharacterListViewModel
 
     init() {
-        let navBarAppearance = UINavigationBarAppearance()
-            navBarAppearance.configureWithOpaqueBackground()
-            navBarAppearance.backgroundColor = UIColor.white
-
-        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
         _viewModel = ObservedObject(wrappedValue: CharacterListViewModel())
     }
 
@@ -31,14 +26,12 @@ struct CharacterListView: View {
                 }
                 CharacterLastRowView(paginationState: viewModel.paginationState,
                                      loadMoreItems: viewModel.loadMoreItems)
-                    .background(.white)
                     .listRowSeparator(.hidden)
                     .id("CharacterLastRowView")
             }
             .listStyle(.plain)
             .navigationTitle(viewModel.titleNavigation)
             .font(.subheadline)
-            .background(.white)
             .padding([.leading, .trailing], 0)
             .navigationBarTitleDisplayMode(.inline)
             .id("CharactersList")
