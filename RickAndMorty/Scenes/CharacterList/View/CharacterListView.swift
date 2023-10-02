@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CharacterListView: View {
     @ObservedObject private(set) var viewModel: CharacterListViewModel
-
+    @State var searchTerm: String = ""
     init() {
         _viewModel = ObservedObject(wrappedValue: CharacterListViewModel())
     }
@@ -35,6 +35,15 @@ struct CharacterListView: View {
             .padding([.leading, .trailing], 0)
             .navigationBarTitleDisplayMode(.inline)
             .id("CharactersList")
+            .searchable(text: $searchTerm)
+            .onChange(of: searchTerm) { oldValue, newValue in
+                if oldValue.count > 1 {
+                    viewModel.searchName = newValue
+                    viewModel.loadMoreItems()
+                } else {
+                    viewModel.searchName = ""
+                }
+            }
         }
     }
 

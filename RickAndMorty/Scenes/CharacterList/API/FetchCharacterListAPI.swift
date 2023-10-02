@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol CharacterListViewModelProtocol {
-    func loadCharacters(_ handler: @escaping ([RyckAndMortyCharacter], PaginationState) -> Void)
+    func loadCharacters(_ name: String, _ handler: @escaping ([RyckAndMortyCharacter], PaginationState) -> Void)
 }
 
 final class FetchCharacterListAPI: CharacterListViewModelProtocol {
@@ -18,6 +18,7 @@ final class FetchCharacterListAPI: CharacterListViewModelProtocol {
 
     private var cancellable: Cancellable?
     private(set) var currentPage: Int = 1
+    private(set) var prevName: String = ""
     private var previewCharacters: [RyckAndMortyCharacter] = []
     private lazy var httpClient: HTTPClient = {
         URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
@@ -28,13 +29,18 @@ final class FetchCharacterListAPI: CharacterListViewModelProtocol {
         self.reachability = reachability
     }
 
-    func loadCharacters(_ handler: @escaping ([RyckAndMortyCharacter], PaginationState) -> Void) {
+    func loadCharacters(_ name: String, _ handler: @escaping ([RyckAndMortyCharacter], PaginationState) -> Void) {
+        if prevName != name {
+            currentPage = 0
+            previewCharacters.removeAll()
+        }
+        prevName = name
         guard reachability.isConnectedToNetwork()  else {
             handler(previewCharacters, .loadedAll)
             return
         }
 
-        cancellable = makeRemoteCharacterLoader(currentPage).handleEvents(receiveCancel: {
+        cancellable = makeRemoteCharacterLoader(currentPage, name).handleEvents(receiveCancel: {
             handler([], .noResults)
         })
         .receive(on: DispatchQueue.main)
@@ -44,7 +50,7 @@ final class FetchCharacterListAPI: CharacterListViewModelProtocol {
             case .finished:
                 break
             case let .failure(error):
-                self.loadCharacters(handler)
+                self.loadCharacters(name, handler)
                 print(error.localizedDescription)
             }
         }, receiveValue: { [weak self] resource in
@@ -55,9 +61,9 @@ final class FetchCharacterListAPI: CharacterListViewModelProtocol {
         })
     }
 
-    private func makeRemoteCharacterLoader(_ page: Int = 1) -> AnyPublisher<[RyckAndMortyCharacter], Error> {
+    private func makeRemoteCharacterLoader(_ page: Int = 1, _ name: String) -> AnyPublisher<[RyckAndMortyCharacter], Error> {
         print("currentPage: \(currentPage)")
-        let url = CharactersEndPoint.get(page: page).url(baseURL: baseURL)
+        let url = CharactersEndPoint.get(page: page, name: name).url(baseURL: baseURL)
         return httpClient
             .getPublisher(url: url)
             .tryMap(CharacterItemsMapper.map)

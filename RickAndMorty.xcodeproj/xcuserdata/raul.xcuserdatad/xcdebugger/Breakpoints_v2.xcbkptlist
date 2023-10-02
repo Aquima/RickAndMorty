@@ -7,65 +7,144 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AFD5E15B-6C8A-4D3C-A8F4-1D8582C75A76"
+            uuid = "1959C267-63C4-45BD-8DF1-4008E77A06F0"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RickAndMorty/Scenes/CharacterList/API/FetchCharacterListAPI.swift"
+            filePath = "RickAndMorty/Scenes/CharacterList/View/CharacterListView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "makeRemoteCharacterLoader(_:)"
-            landmarkType = "7">
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6D3656A1-2EBA-4261-9E0C-3662E73E8008"
+            uuid = "713D6FF3-97D8-4C8B-92B8-FBB3A4E07145"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMorty/Scenes/CharacterList/ViewModel/CharacterListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "fetchCharacters()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "713D6FF3-97D8-4C8B-92B8-FBB3A4E07145 - 30943a48ad758213"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RickAndMorty.CharacterListViewModel.fetchCharacters() -&gt; ()"
+                  moduleName = "RickAndMorty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raul/Documents/Quimalabs/RickAndMorty/RickAndMorty/Scenes/CharacterList/ViewModel/CharacterListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "713D6FF3-97D8-4C8B-92B8-FBB3A4E07145 - e25c017efba8efea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;RickAndMorty.RyckAndMortyCharacter&gt;, RickAndMorty.PaginationState) -&gt; () in RickAndMorty.CharacterListViewModel.fetchCharacters() -&gt; ()"
+                  moduleName = "RickAndMorty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raul/Documents/Quimalabs/RickAndMorty/RickAndMorty/Scenes/CharacterList/ViewModel/CharacterListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "74407716-FD29-406D-87EA-9DDD1EE7AD8C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RickAndMorty/Scenes/CharacterList/API/FetchCharacterListAPI.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "loadCharacters(_:)"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "makeRemoteCharacterLoader(_:_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "6D3656A1-2EBA-4261-9E0C-3662E73E8008 - 41f9ba6e22b56ffa"
+                  uuid = "74407716-FD29-406D-87EA-9DDD1EE7AD8C - c39ac3bfc3905100"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "RickAndMorty.FetchCharacterListAPI.loadCharacters((Swift.Array&lt;RickAndMorty.RyckAndMortyCharacter&gt;, RickAndMorty.PaginationState) -&gt; ()) -&gt; ()"
+                  symbolName = "RickAndMorty.FetchCharacterListAPI.makeRemoteCharacterLoader(Swift.Int, Swift.String) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;RickAndMorty.RyckAndMortyCharacter&gt;, Swift.Error&gt;"
                   moduleName = "RickAndMorty"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/raul/Documents/Quimalabs/RickAndMorty/RickAndMorty/Scenes/CharacterList/API/FetchCharacterListAPI.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "1696">
+                  startingLineNumber = "61"
+                  endingLineNumber = "61"
+                  offsetFromSymbolStart = "1124">
                </Location>
                <Location
-                  uuid = "6D3656A1-2EBA-4261-9E0C-3662E73E8008 - 41f9ba6e22b56fb8"
+                  uuid = "74407716-FD29-406D-87EA-9DDD1EE7AD8C - c39ac3bfc39056ad"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "RickAndMorty.FetchCharacterListAPI.loadCharacters((Swift.Array&lt;RickAndMorty.RyckAndMortyCharacter&gt;, RickAndMorty.PaginationState) -&gt; ()) -&gt; ()"
+                  symbolName = "RickAndMorty.FetchCharacterListAPI.makeRemoteCharacterLoader(Swift.Int, Swift.String) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;RickAndMorty.RyckAndMortyCharacter&gt;, Swift.Error&gt;"
                   moduleName = "RickAndMorty"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/raul/Documents/Quimalabs/RickAndMorty/RickAndMorty/Scenes/CharacterList/API/FetchCharacterListAPI.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "348">
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "1124">
+               </Location>
+               <Location
+                  uuid = "74407716-FD29-406D-87EA-9DDD1EE7AD8C - c39ac3bfc39056ca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RickAndMorty.FetchCharacterListAPI.makeRemoteCharacterLoader(Swift.Int, Swift.String) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;RickAndMorty.RyckAndMortyCharacter&gt;, Swift.Error&gt;"
+                  moduleName = "RickAndMorty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/raul/Documents/Quimalabs/RickAndMorty/RickAndMorty/Scenes/CharacterList/API/FetchCharacterListAPI.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "1124">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06ABE13B-74E0-43F7-AC50-7C8ACC91D167"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RickAndMorty/Scenes/CharacterList/API/FetchCharacterListAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "loadCharacters(_:_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
