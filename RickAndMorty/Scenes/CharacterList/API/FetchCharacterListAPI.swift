@@ -13,7 +13,7 @@ protocol CharacterListViewModelProtocol {
 }
 
 final class FetchCharacterListAPI: CharacterListViewModelProtocol {
-
+    typealias ResultCharacter = AnyPublisher<[RyckAndMortyCharacter], Error>
     private lazy var baseURL = URL(string: "https://rickandmortyapi.com/api/")!
 
     private var cancellable: Cancellable?
@@ -61,7 +61,7 @@ final class FetchCharacterListAPI: CharacterListViewModelProtocol {
         })
     }
 
-    private func makeRemoteCharacterLoader(_ page: Int = 1, _ name: String) -> AnyPublisher<[RyckAndMortyCharacter], Error> {
+    private func makeRemoteCharacterLoader(_ page: Int = 1, _ name: String) -> ResultCharacter {
         print("currentPage: \(currentPage)")
         let url = CharactersEndPoint.get(page: page, name: name).url(baseURL: baseURL)
         return httpClient

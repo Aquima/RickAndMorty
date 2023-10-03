@@ -14,6 +14,8 @@ public final class CharacterItemsMapper {
         let name: String
         let status: String
         let image: String
+        let species: String
+        let gender: String
     }
 
     private struct Root: Decodable {
@@ -24,8 +26,10 @@ public final class CharacterItemsMapper {
             results.map { RyckAndMortyCharacter(id: UUID(),
                                                 dbid: $0.id,
                                                 name: $0.name,
-                                                status: Status(rawValue: $0.status) ?? .alive,
-                                                image: $0.image) }
+                                                status: StatusCharacter(rawValue: $0.status) ?? .alive,
+                                                image: $0.image,
+                                                species: Species(rawValue: $0.species) ?? .human,
+                                                gender: Gender(rawValue: $0.gender) ?? .unknown)}
         }
     }
 

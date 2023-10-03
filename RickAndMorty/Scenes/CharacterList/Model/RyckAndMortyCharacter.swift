@@ -13,42 +13,47 @@ public struct RyckAndMortyCharacter: Identifiable, Hashable {
     public let id: UUID
     public let dbid: Int
     public let name: String
-    public let status: Status
+    public let status: StatusCharacter
     public let image: String
+    public let species: Species
+    public let gender: Gender
+//    public let location: LocationCharacter
 
-    public init(id: UUID, dbid: Int, name: String, status: Status, image: String) {
+    public init(id: UUID,
+                dbid: Int,
+                name: String,
+                status: StatusCharacter,
+                image: String,
+                species: Species,
+                gender: Gender) {
         self.dbid = dbid
         self.id = id
         self.name = name
         self.status = status
         self.image = image
+        self.species = species
+        self.gender = gender
     }
 }
 
-// MARK: - Info
-public struct Info: Codable {
-    let count, pages: Int
-    let next: String
-    let prev: String?
-}
-enum Gender: String, Codable {
+public enum Gender: String {
     case female = "Female"
     case male = "Male"
     case unknown = "unknown"
 }
 
 // MARK: - Location
-struct Location: Codable {
+public struct LocationCharacter {
     let name: String
     let url: String
 }
 
-enum Species: String, Codable {
+public enum Species: String {
     case alien = "Alien"
     case human = "Human"
 }
 
-public enum Status: String, Codable {
+public enum StatusCharacter: String {
     case alive = "Alive"
     case dead = "Dead"
     case unknown = "unknown"

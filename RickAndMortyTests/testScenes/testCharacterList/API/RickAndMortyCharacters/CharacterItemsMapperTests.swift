@@ -43,14 +43,18 @@ final class CharacterItemsMapperTests: XCTestCase {
             dbid: 1,
             name:"Ryck",
             status: .alive,
-            imageURL: "http://a_url.com")
+            imageURL: "http://a_url.com",
+            species: .human,
+            gender: .unknown)
         
         let item2 = makeItem(
             id: UUID(),
             dbid: 2,
             name: "Morty",
             status: .alive,
-            imageURL: "http://another_url.com")
+            imageURL: "http://another_url.com",
+            species: .human,
+            gender: .unknown)
         
         let json = makeItemsJSON([item1.json, item2.json])
         
@@ -70,13 +74,15 @@ final class CharacterItemsMapperTests: XCTestCase {
     
     // MARK: - Helpers
     
-    private func makeItem(id:UUID, dbid: Int, name: String, status: Status = .alive, imageURL: String) -> (model: RyckAndMortyCharacter, json: [String: Any]) {
-        let item = RyckAndMortyCharacter(id: id, dbid: dbid, name: name, status: .alive, image: imageURL)
+    private func makeItem(id:UUID, dbid: Int, name: String, status: StatusCharacter = .alive, imageURL: String, species: Species = .human, gender: Gender = .unknown) -> (model: RyckAndMortyCharacter, json: [String: Any]) {
+        let item = RyckAndMortyCharacter(id: id, dbid: dbid, name: name, status: .alive, image: imageURL, species: species, gender: gender)
         let json = [
             "id": dbid,
             "name": name,
             "status": status.rawValue,
-            "image": imageURL
+            "image": imageURL,
+            "species": species.rawValue,
+            "gender": gender.rawValue
         ].compactMapValues { $0 }
         
         return (item, json)

@@ -13,11 +13,11 @@ extension View {
         self.font(.custom("Helvetica-Regular", size: 14))
             .foregroundColor(FenixColor.messageTextColor.swiftUIColor)
     }
-    func fenixTextStyled(_ status: Status) -> some View {
+    func fenixTextStyled(_ status: StatusCharacter) -> some View {
         self.font(.custom("Helvetica-Bold", size: 17)).foregroundColor(getColor(status))
     }
 
-    private func getColor(_ status: Status) -> Color {
+    private func getColor(_ status: StatusCharacter) -> Color {
         switch status {
         case .dead:
             return .red

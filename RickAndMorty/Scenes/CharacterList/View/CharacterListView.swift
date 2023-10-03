@@ -18,7 +18,7 @@ struct CharacterListView: View {
         NavigationStack {
             List { ForEach(viewModel.previewCharacters, id: \.id) { character in
                     NavigationLink {
-                        EmptyView()
+                        CharacterDetailView(currentCharacter: .constant(character))
                     } label: {
                         CharacterItemView(character: .constant(character))
                             .background(.clear)
@@ -35,7 +35,7 @@ struct CharacterListView: View {
             .padding([.leading, .trailing], 0)
             .navigationBarTitleDisplayMode(.inline)
             .id("CharactersList")
-            .searchable(text: $searchTerm)
+            .searchable(text: $searchTerm, placement: .navigationBarDrawer(displayMode: .always))
             .onChange(of: searchTerm) { oldValue, newValue in
                 if oldValue.count > 1 {
                     viewModel.searchName = newValue
