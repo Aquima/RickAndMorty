@@ -27,15 +27,17 @@ struct CharacterItemView: View {
     }
 
     var imageCharacterLoader: some View {
-        CachedAsyncImage(url: .init(string: character.image)) { image in
+        let boxSize = 150.00
+        return CachedAsyncImage(url: .init(string: character.image)) { image in
             image.resizable()
-                .frame(width: 150, height: 150)
-                .border(Color.black.opacity(0.5), width: 2)
+                .frame(width: boxSize, height: boxSize)
+                .border(Color.black.opacity(0.2), width: 2)
                 .id("CharacterImage")
         } placeholder: {
             ProgressView()
-                .frame(height: 45,
+                .frame(width: boxSize, height: boxSize,
                        alignment: .center)
+                .border(Color.black.opacity(0.2), width: 2)
         }
     }
 }

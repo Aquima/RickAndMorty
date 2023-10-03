@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		963179692ACBCD400056DB5C /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963179682ACBCD400056DB5C /* CharacterDetailView.swift */; };
 		C4012EA12AC6563800FAD18D /* IntroViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4012EA02AC6563800FAD18D /* IntroViewTests.swift */; };
 		C4012EA52AC65A2300FAD18D /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4012EA42AC65A2300FAD18D /* IntroViewModel.swift */; };
 		C422FBE92AC4D1CD0033B5CB /* RyckAndMortyCharactersListStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = C422FBE82AC4D1CD0033B5CB /* RyckAndMortyCharactersListStub.swift */; };
@@ -72,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		963179682ACBCD400056DB5C /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 		C4012E9D2AC64ED600FAD18D /* MainTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MainTestPlan.xctestplan; sourceTree = "<group>"; };
 		C4012EA02AC6563800FAD18D /* IntroViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewTests.swift; sourceTree = "<group>"; };
 		C4012EA42AC65A2300FAD18D /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
@@ -150,6 +152,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		963179632ACBCD130056DB5C /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				963179642ACBCD130056DB5C /* ViewModel */,
+				963179652ACBCD130056DB5C /* Resources */,
+				963179662ACBCD130056DB5C /* Model */,
+				963179672ACBCD130056DB5C /* View */,
+			);
+			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
+		963179642ACBCD130056DB5C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		963179652ACBCD130056DB5C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		963179662ACBCD130056DB5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		963179672ACBCD130056DB5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				963179682ACBCD400056DB5C /* CharacterDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C49FE2CF2AC3BEE500D27AED /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,9 +383,9 @@
 		C4FC95992AC2683E004F6C4D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				963179632ACBCD130056DB5C /* CharacterDetail */,
 				C4FC959A2AC2683E004F6C4D /* Intro */,
 				C4FC959E2AC2683E004F6C4D /* CharacterList */,
-				C4FC95A22AC2683E004F6C4D /* CharacterDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -417,37 +459,6 @@
 				C4CA0F4B2AC325FE0045D386 /* CharacterListView.swift */,
 				C4CA0F4D2AC326AC0045D386 /* CharacterItemView.swift */,
 				C49FE2C92AC3B56900D27AED /* CharacterLastRowView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		C4FC95A22AC2683E004F6C4D /* CharacterDetail */ = {
-			isa = PBXGroup;
-			children = (
-				C4FC95A32AC2683E004F6C4D /* ViewModel */,
-				C4FC95A42AC2683E004F6C4D /* Model */,
-				C4FC95A52AC2683E004F6C4D /* View */,
-			);
-			path = CharacterDetail;
-			sourceTree = "<group>";
-		};
-		C4FC95A32AC2683E004F6C4D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		C4FC95A42AC2683E004F6C4D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C4FC95A52AC2683E004F6C4D /* View */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -807,6 +818,7 @@
 				C49FE2D72AC3C72000D27AED /* CharacterDataMapper.swift in Sources */,
 				C4C4988E2AC544CA00880D33 /* Rechability.swift in Sources */,
 				C4CA0F502AC327890045D386 /* RyckAndMortyCharacter.swift in Sources */,
+				963179692ACBCD400056DB5C /* CharacterDetailView.swift in Sources */,
 				C4FC956F2AC26819004F6C4D /* RickAndMortyApp.swift in Sources */,
 				C4FC95D52AC285DD004F6C4D /* FenixTextStyle.swift in Sources */,
 				C422FBE92AC4D1CD0033B5CB /* RyckAndMortyCharactersListStub.swift in Sources */,
