@@ -61,7 +61,13 @@ final class FetchCharacterListAPI: CharacterListViewModelProtocol {
         })
     }
 
-    private func makeRemoteCharacterLoader(_ page: Int = 1, _ name: String) -> AnyPublisher<[RyckAndMortyCharacter], Error> {
+    private func makeRemoteCharacterLoader(
+        _ page: Int = 1,
+        _ name: String
+    ) -> AnyPublisher<
+        [RyckAndMortyCharacter],
+        Error
+    > {
         print("currentPage: \(currentPage)")
         let url = CharactersEndPoint.get(page: page, name: name).url(baseURL: baseURL)
         return httpClient

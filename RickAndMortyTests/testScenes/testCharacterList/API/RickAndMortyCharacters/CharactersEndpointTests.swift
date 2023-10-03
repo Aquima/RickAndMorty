@@ -30,6 +30,6 @@ final class CharactersEndpointTests: XCTestCase {
         XCTAssertEqual(received.host, "any_base_url.com", "host")
         XCTAssertEqual(received.path, "/character", "path")
         XCTAssertEqual(received.query?.contains("page=1"), true, "page query param")
-        XCTAssertEqual(received.query?.contains("name=rick     "), true, "name query param")
+        XCTAssertEqual(received.query?.contains("name=rick"), true, "name query param")
     }
 }
