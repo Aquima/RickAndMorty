@@ -6,5 +6,10 @@
 	<array>
 		<string>get_schwifty.ttf</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIImageName</key>
+		<string>background</string>
+	</dict>
 </dict>
 </plist>
