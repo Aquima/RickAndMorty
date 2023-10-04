@@ -12,6 +12,7 @@ struct CharacterItemView: View {
 
     @Binding var character: RyckAndMortyCharacter
 
+    @State var animated: Bool = false
     var body: some View {
         HStack {
             imageCharacterLoader
@@ -23,6 +24,15 @@ struct CharacterItemView: View {
                     .fenixTextStyled(character.status)
                     .id("CharacterStatus")
             }
+        }
+        .opacity(animated ? 1.0 : 0.2)
+        .offset(CGSize(width: 0, height: animated ? -10 : 0))
+        .onAppear {
+            withAnimation(.easeInOut(duration: 1).delay(0.1)) {
+                animated.toggle()
+             }
+        }.onDisappear {
+            animated.toggle()
         }
     }
 
