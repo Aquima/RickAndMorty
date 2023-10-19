@@ -17,21 +17,22 @@ struct IntroView: View {
     }
 
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 350, content: {
-                logo
-                VStack(spacing: 20, content: {
-                    messageText
-                    enterButton
-                })
-                .navigationDestination(isPresented: $viewModel.showingCharacterListView) {
-                    CharacterListView()
-                }
+        VStack(spacing: 350, content: {
+            logo
+            VStack(spacing: 20, content: {
+                messageText
+                enterButton
             })
-            .background {
-                Image(viewModel.background, bundle: .main)
-                    .background(.black)
-            }
+            .fullScreenCover(isPresented: $viewModel.showingCharacterListView, content: {
+                NavigationStack(root: {
+                    CharacterListView()
+                })
+            })
+
+        })
+        .background {
+            Image(viewModel.background, bundle: .main)
+                .background(.black)
         }
     }
 
@@ -54,6 +55,11 @@ struct IntroView: View {
         .padding(.trailing, 40)
         .buttonStyle(FenixButtonStyle())
         .id(viewModel.idEnterButton)
+        .phaseAnimator([false, true], content: { content, phase in
+            content.scaleEffect(phase ? 1.5 : 1.0)
+        }, animation: { _ in
+                .easeInOut(duration: 1.0)
+        })
     }
 
     private var messageText: some View {
