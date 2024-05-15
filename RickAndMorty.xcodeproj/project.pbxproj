@@ -290,13 +290,6 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
-		C4CA0F542AC329170045D386 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		C4FC95622AC26819004F6C4D = {
 			isa = PBXGroup;
 			children = (
@@ -364,10 +357,8 @@
 			children = (
 				C49FE2DF2AC3CA7400D27AED /* Shared API Infra */,
 				C49FE2DA2AC3C8AF00D27AED /* Shared API */,
-				C4CA0F542AC329170045D386 /* Base */,
 				C4FC95CF2AC27B41004F6C4D /* Resources */,
 				C4FC95CA2AC27958004F6C4D /* AtomicDesign */,
-				C4FC95C52AC2746D004F6C4D /* Modifier */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -387,7 +378,6 @@
 			children = (
 				C4FC95BE2AC26E2F004F6C4D /* Resources */,
 				C4FC959B2AC2683E004F6C4D /* ViewModel */,
-				C4FC959C2AC2683E004F6C4D /* Model */,
 				C4FC959D2AC2683E004F6C4D /* View */,
 			);
 			path = Intro;
@@ -399,13 +389,6 @@
 				C4012EA42AC65A2300FAD18D /* IntroViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		C4FC959C2AC2683E004F6C4D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		C4FC959D2AC2683E004F6C4D /* View */ = {
@@ -468,25 +451,9 @@
 			isa = PBXGroup;
 			children = (
 				C49FE2F12AC3DA8900D27AED /* API */,
-				C4FC95A82AC2684E004F6C4D /* ViewModel */,
-				C4FC95A92AC2684E004F6C4D /* Model */,
 				C4FC95AA2AC2684E004F6C4D /* View */,
 			);
 			path = testCharacterList;
-			sourceTree = "<group>";
-		};
-		C4FC95A82AC2684E004F6C4D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		C4FC95A92AC2684E004F6C4D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		C4FC95AA2AC2684E004F6C4D /* View */ = {
@@ -548,13 +515,6 @@
 				C4FC95C82AC276B4004F6C4D /* IntroLocalizable.strings */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		C4FC95C52AC2746D004F6C4D /* Modifier */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Modifier;
 			sourceTree = "<group>";
 		};
 		C4FC95CA2AC27958004F6C4D /* AtomicDesign */ = {
@@ -964,7 +924,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RickAndMorty/Preview Content\"";
-				DEVELOPMENT_TEAM = 73A3QCVC2H;
+				DEVELOPMENT_TEAM = RQC82YSVFL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RickAndMorty/Info.plist;
@@ -998,7 +958,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RickAndMorty/Preview Content\"";
-				DEVELOPMENT_TEAM = 73A3QCVC2H;
+				DEVELOPMENT_TEAM = RQC82YSVFL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RickAndMorty/Info.plist;
